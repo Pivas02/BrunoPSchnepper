@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Latin+Modern+Roman:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Latin Modern Roman', serif;
+            font-size: 1.2em;
+        }
+        .navbar {
+            margin-bottom: 2rem;
+        }
+        .navbar-brand {
+            font-size: 1.75em; /* Increase font size of navbar brand */
+            font-weight: bold;
+        }
+        section {
+            padding: 90px 0;
+        }
+        .jumbotron {
+            background-color: #f8f9fa;
+        }
+        .nav-link {
+            font-weight: bold;
+            color: black !important
+        }
+        .card-title {
+            width: 100%;
+            color: darkblue; /* Set the title color to dark blue */
+        }
+        .abstract-toggle {
+            cursor: pointer;
+            font-weight: bold;
+            color: darkblue;
+            background: none;
+            border: none;
+            padding: 0;
+            font-size: 1rem;
+            text-decoration: underline;
+        }
+        .abstract-container {
+            display: none;
+            overflow: hidden;
+        }
+        .card-title a {
+            color: darkblue;
+        }
+        .card-title a:hover {
+            text-decoration: underline; /* Add underline on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#">Your Name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#interests">Interests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2 class="text-center">About Me</h2>
+            <div class="row justify-content-center">
+                <!-- Column for the image -->
+                <div class="col-md-4 text-center">
+                    <img src="figures/gato.jpeg" alt="Your Photo" class="img-fluid" style="width: 200px; height: 200px; object-fit: cover;">
+                </div>
+                <!-- Column for the text -->
+                <div class="col-md-8">
+                    <p>I am a physicist with a passion for research and innovation. Here is a brief overview of my background and expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section id="interests">
+        <div class="container">
+            <h2 class="text-center">Interests</h2>
+            <p class="text-center">Some of my notable interests and research works.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-10 mb-4"> <!-- change the number in col-md-x to make the box bigger or smaller-->
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="text-center">
+                            <h5 class="card-title">Interest 1</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <video controls width="100%">
+                                        <source src="figures/teste.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>Description of interest 1 with the video beside it. This text will wrap around the video and provide more details about the interest.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-10 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Interest 2</h5>
+                            <p class="card-text">Description of interest 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Interest 3</h5>
+                            <p class="card-text">Description of interest 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications">
+        <div class="container">
+            <h2 class="text-center">Publications</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-10 mb-4 custom-width">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="link/to/paper1.pdf" target="_blank">Publication Title 1</a>
+                            </h5>
+                            <p class="card-text">Authors: Author A, Author B, Author C</p>
+                            <button class="abstract-toggle" data-toggle="abstract1">Abstract</button>
+                            <div class="abstract-container mt-3" id="abstract1">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="path/to/figure1.jpg" alt="Figure 1" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Abstract text for publication 1. This is a brief description of the paper, its findings, and its significance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more publications as needed -->
+                <div class="col-md-10 mb-4 custom-width">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="link/to/paper2.pdf" target="_blank">Publication Title 2</a>
+                            </h5>
+                            <p class="card-text">Authors: Author D, Author E, Author F</p>
+                            <button class="abstract-toggle" data-toggle="abstract2">Abstract</button>
+                            <div class="abstract-container mt-3" id="abstract2">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img src="path/to/figure2.jpg" alt="Figure 2" class="img-fluid">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Abstract text for publication 2. This is a brief description of the paper, its findings, and its significance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more publications as needed -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light">
+        <div class="container">
+            <h2 class="text-center">Contact</h2>
+            <p class="text-center">Feel free to reach out to me via the following contact details.</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+    $(document).ready(function () {
+        // Ensure all abstract containers are hidden initially
+        $('.abstract-container').hide();
+
+        // Use jQuery to handle the toggle animation
+        $('.abstract-toggle').on('click', function () {
+            var target = $('#' + $(this).data('toggle'));
+            target.stop(true, true).slideToggle(400); //400ms for the animation // Use jQuery's slideToggle for smooth animation
+        });
+    });
+    </script>
+</body>
+</html>
+
